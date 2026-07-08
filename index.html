@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PROJET 4.1: Navigation responsive avec Flexbox</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <nav class="navbar" id="navbar">
@@ -14,9 +21,72 @@
 
       <ul class="menu" id="menu">
         <li>
-          <a href=""></a>
+          <a href="#accueil" class="menu-link">Accueil</a>
+        </li>
+        <li class="has-dropdown">
+          <a href="#services" class="menu-link">
+            Services <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <ul class="dropdown">
+            <li>
+              <a href="#dev-web"
+                >Développement web
+                <span class="sub-desc">Sites & apps sur-mesure</span></a
+              >
+            </li>
+            <li>
+              <a href="#mobile"
+                >Applications mobiles
+                <span class="sub-desc">iOS, Android, cross-platform</span></a
+              >
+            </li>
+            <li>
+              <a href="#cloud"
+                >Infrastructure cloud
+                <span class="sub-desc">Docker, CI/CD, déploiement</span></a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#apropos" class="menu-link"> A propos </a>
+        </li>
+        <li>
+          <a href="#contact" class="menu-link">contact</a>
+        </li>
+        <li>
+          <a href="#contact" class="mobile-cta">Contactez nous</a>
         </li>
       </ul>
+
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="themeToggle">
+          <i id="themeIcon" class="fa-solid fa-moon"></i>
+        </button>
+        <a href="#contact" class="cta">Contactez-nous</a>
+        <button>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </nav>
+
+    <main class="content">
+      <h1>Semaine 4 — Projet 4.1 : Navigation responsive Flexbox</h1>
+      <p>
+        Cette page démontre une barre de navigation construite avec
+        <code>display: flex</code>,
+        <code>justify-content: space-between</code> et
+        <code>align-items: center</code>. Réduis la fenêtre sous 768px pour voir
+        le menu burger apparaître, ou fais défiler la page pour observer la
+        navbar rétrécir et se doter d'un fond flou.
+      </p>
+      <p>
+        Survole "Services" (ou tabule au clavier jusqu'à ce lien) pour voir le
+        sous-menu déroulant. Le bouton en forme de lune/soleil bascule entre
+        thème sombre et clair.
+      </p>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
